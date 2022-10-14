@@ -77,7 +77,10 @@ gov_at_glance2021_structure <- get_data_structure(gov_at_glance)
 gov_at_glance2021 <- get_dataset("GOV_2021")
 
 #### WDI World Development Indicators - World Bank
-WDI <- WDIsearch(string = "labor", field = "name", short = TRUE, cache = NULL)
+## https://github.com/vincentarelbundock/WDI 
+
+## Testing
+WDI <- WDIsearch(string = "migration", field = "name", short = TRUE, cache = NULL)
 government_effectiveness <- WDI(indicator = "GE.EST", 
                                 country = "EE", 
                                 start=2000, end=2019)
@@ -86,7 +89,9 @@ productivity_growth <- WDI(indicator = "IC.FRM.PROD.GROW.PEFT3",
                             start=2000, end=2019)
 
 
-
+net_migration <- WDI(indicator = "SM.POP.NETM", 
+                           country = "EE", 
+                           start=2000, end=2019)
 
 
 
