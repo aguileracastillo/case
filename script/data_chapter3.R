@@ -10,6 +10,7 @@ library(OECD)
 library(WDI)
 library(countrycode)
 library(ggplot2)
+library(chatgpt)
 
 
 #### ILOSTAT
