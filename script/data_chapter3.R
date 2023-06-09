@@ -96,7 +96,9 @@ net_migration <- WDI(indicator = "SM.POP.NETM",
 
 
 
-
+#### EUROSTAT 
+egov <- search_eurostat("e-government")
+desi <- search_eurostat("desi")
 
 
 
