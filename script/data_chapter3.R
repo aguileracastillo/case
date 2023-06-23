@@ -16,7 +16,7 @@ library(chatgpt)
 #### ILOSTAT
 runExplorer()
 ilostat_toc <- get_ilostat_toc() ## table of contents --> id
-ilostat_dic <- get_ilostat_dic("indicator") ## dictionary
+ilostat_dic <- get_ilostat_dic("ILR_TUMT_NOC_RT") ## dictionary
 
 ## Employment by sex and institutional sector - Annual
 employment_sex_sector <- get_ilostat("EMP_TEMP_SEX_INS_NB_A")
@@ -97,6 +97,9 @@ net_migration <- WDI(indicator = "SM.POP.NETM",
 
 
 #### EUROSTAT 
+toc <- get_eurostat_toc()
+digital_gov_datasets <- grep("E-government", toc$title, value = TRUE)
+print(digital_gov_datasets)
 egov <- search_eurostat("e-government")
 desi <- search_eurostat("desi")
 
